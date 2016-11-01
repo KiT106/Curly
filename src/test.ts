@@ -12,8 +12,8 @@ declare var __karma__: any;
 declare var require: any;
 
 // Prevent Karma from running prematurely.
+/* tslint:disable:no-empty */
 __karma__.loaded = function () {};
-
 
 Promise.all([
   System.import('@angular/core/testing'),

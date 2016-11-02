@@ -10,6 +10,7 @@
       "variables-before-functions"
     ],
     "no-inferrable-types": true,
+    "no-string-literal": false,
     "no-switch-case-fall-through": true,
     "object-literal-sort-keys": false,
     "no-use-before-declare": true,

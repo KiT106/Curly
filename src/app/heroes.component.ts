@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HeroService } from './hero.service';
 import { Hero } from './hero';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'curly-heroes',
@@ -12,8 +13,10 @@ export class HeroesComponent implements OnInit {
   public heroes: Array<Hero>;
   public selectedHero: Hero;
 
-  constructor(private heroService: HeroService) {
-  }
+  constructor(
+    private heroService: HeroService,
+    private router: Router
+  ) { }
 
   public ngOnInit(): void {
     this.heroService.getHeroes()
@@ -22,5 +25,9 @@ export class HeroesComponent implements OnInit {
 
   public onSelect(hero: Hero): void {
     this.selectedHero = hero;
+  }
+
+  public gotoDetail(): void {
+    this.router.navigate(['/heroes', this.selectedHero.id]);
   }
 }

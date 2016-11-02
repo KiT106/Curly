@@ -6,8 +6,10 @@ import { Hero }        from './hero';
 import { HeroService } from './hero.service';
 
 @Component({
+  moduleId: 'hero', // TODO moduleId: module.id
   selector: 'curly-hero',
-  templateUrl: 'hero.component.html'
+  templateUrl: 'hero.component.html',
+  styleUrls: ['hero.component.css']
 })
 export class HeroComponent implements OnInit {
   @Input()

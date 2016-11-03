@@ -9,6 +9,7 @@
       "static-before-instance",
       "variables-before-functions"
     ],
+    "no-console": false,
     "no-inferrable-types": true,
     "no-string-literal": false,
     "no-switch-case-fall-through": true,

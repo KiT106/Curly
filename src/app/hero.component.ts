@@ -29,6 +29,11 @@ export class HeroComponent implements OnInit {
     });
   }
 
+  public save(): void {
+    this.heroService.update(this.hero)
+      .then(() => this.goBack());
+  }
+
   public goBack(): void {
     this.location.back();
   }
